@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { siteConfig, whatsappHref } from "@/lib/site";
+export const metadata: Metadata = { title: "Book", description: "Book recovery, sports massage, mobility, or personal training in Popoyo on WhatsApp." };
+export default function BookPage(){return <main className="section-shell py-16"><p className="text-xs uppercase text-[#386575]">Book</p><h1 className="font-editorial mt-5 text-6xl leading-none">Start with a message.</h1><p className="mt-6 max-w-2xl leading-8 text-[#676057]">Send what you are looking for, when you are available, and whether you prefer bodywork, training, mobility, or a mix.</p><a href={whatsappHref} className="mt-8 inline-flex bg-[#24231f] px-6 py-3 text-sm text-[#fbf8f1]">WhatsApp {siteConfig.whatsappDisplay}</a></main>}
