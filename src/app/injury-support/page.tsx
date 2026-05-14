@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import { ImagePanel } from "@/components/image-panel";
+import { whatsappHref } from "@/lib/site";
+export const metadata: Metadata = { title: "Injury Support Popoyo", description: "Injury support in Popoyo for minor injuries, pain, movement checks, corrective exercise, mobility, strengthening, and return to activity." };
+export default function Page(){return <main className="section-shell grid gap-10 py-16 md:grid-cols-2 md:items-center"><div><h1 className="font-editorial text-6xl">Injury Support</h1><p className="mt-6 leading-8 text-[#676057]">Structured support for minor injuries, pain, and return to activity. Sessions may include movement checks, corrective exercise, mobility work, strengthening, and gradual return-to-activity planning.</p><a href={whatsappHref} className="mt-8 inline-flex bg-[#24231f] px-6 py-3 text-sm text-[#fbf8f1]">Book on WhatsApp</a></div><ImagePanel src="/images/coastal-recovery.jpg" alt="Injury support in Popoyo" className="aspect-[4/5]"/></main>}
