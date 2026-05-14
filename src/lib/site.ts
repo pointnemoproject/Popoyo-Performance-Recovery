@@ -1,5 +1,8 @@
 export const siteConfig = { name: "Popoyo Performance & Recovery", url: "https://popoyorecovery.com", description: "Personalized bodywork, movement, and performance training for surfers, active travelers, and residents in Popoyo.", whatsappDisplay: "+505 8617 1764", whatsappNumber: "50586171764" };
 export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Hi Popoyo Performance & Recovery, I would like to book a session.")}`;
+export const whatsappButtonClass = "inline-flex border border-[#817869] bg-[#fbf8f1] px-6 py-3 text-sm text-[#24231f] transition hover:border-[#24231f] hover:bg-[#f7f1e8]";
+export const whatsappFloatingClass = "fixed bottom-4 right-4 z-50 inline-flex border border-[#817869] bg-[#fbf8f1]/95 px-5 py-3 text-sm text-[#24231f] shadow-[0_10px_24px_rgba(36,35,31,0.14)] backdrop-blur transition hover:border-[#24231f] hover:bg-[#f7f1e8]";
+export const whatsappFooterClass = "inline-flex border border-[#ded0bd] px-5 py-3 text-sm text-[#f7f1e8] transition hover:bg-[#f7f1e8] hover:text-[#24231f]";
 export const navItems = [{label:"Home",href:"/"},{label:"Services",href:"/#services"},{label:"Approach",href:"/#approach"},{label:"Pricing",href:"/pricing"},{label:"Book",href:"/book"}];
 export const services = [
 {title:"Surf Recovery & Repair",href:"/surf-recovery-repair",image:"/images/surf-running.jpg",copy:"Recover faster between sessions and get back in the water feeling strong. For paddling fatigue, shoulder tension, low back stiffness, tight hips, and surf-related wear and tear."},
