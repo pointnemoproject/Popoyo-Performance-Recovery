@@ -36,7 +36,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
 
       {page.intro ? (
         <section className="border-y hairline bg-[#f7f1e8]">
-          <div className="section-shell grid gap-6 py-14 md:grid-cols-[.8fr_1.2fr] md:py-16">
+          <div className="section-shell grid gap-6 py-14 md:grid-cols-[.72fr_1.28fr] md:gap-12 md:py-16">
             <h2 className="font-editorial text-4xl leading-tight md:text-5xl">
               {page.intro.heading}
             </h2>
@@ -57,7 +57,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
             {page.sections.map((section) => (
               <article
                 key={section.title}
-                className="grid gap-5 border-t hairline pt-8 md:grid-cols-[.7fr_1.3fr]"
+                className="grid gap-6 border-t hairline pt-8 md:grid-cols-[.72fr_1.28fr] md:gap-12"
               >
                 <div>
                   {section.eyebrow ? (
@@ -76,8 +76,10 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
                   {section.items?.length ? (
                     <ul className="grid gap-3 text-[#676057]">
                       {section.items.map((item) => (
-                        <li key={item} className="flex gap-3 leading-7">
-                          <span className="mt-3 h-px w-5 shrink-0 bg-[#a6684a]" />
+                        <li key={item} className="grid grid-cols-[2.75rem_1fr] gap-3 leading-7">
+                          <span aria-hidden="true" className="text-[#a6684a]">
+                            ----
+                          </span>
                           <span>{item}</span>
                         </li>
                       ))}
