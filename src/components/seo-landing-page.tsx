@@ -76,10 +76,8 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
                   {section.items?.length ? (
                     <ul className="grid gap-3 text-[#676057]">
                       {section.items.map((item) => (
-                        <li key={item} className="grid grid-cols-[2.75rem_1fr] gap-3 leading-7">
-                          <span aria-hidden="true" className="text-[#a6684a]">
-                            ----
-                          </span>
+                        <li key={item} className="grid grid-cols-[1.75rem_1fr] gap-3 leading-7">
+                          <span aria-hidden="true" className="mt-3 h-px w-5 bg-[#a6684a]/70" />
                           <span>{item}</span>
                         </li>
                       ))}
