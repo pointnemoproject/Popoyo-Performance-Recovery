@@ -4,6 +4,8 @@ import type { SeoLandingPageContent } from "@/lib/seo-pages";
 import { whatsappButtonClass, whatsappHref } from "@/lib/site";
 
 export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
+  const ctaLabel = page.ctaLabel ?? "Book on WhatsApp";
+
   return (
     <main>
       <section className="section-shell grid gap-10 py-14 md:grid-cols-[.95fr_1.05fr] md:items-center md:py-16">
@@ -17,7 +19,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={whatsappHref} className={whatsappButtonClass}>
-              Book on WhatsApp
+              {ctaLabel}
             </a>
             <Link href="/#services" className="border border-[#817869] px-6 py-3 text-sm">
               Explore Services
@@ -38,7 +40,13 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
             <h2 className="font-editorial text-4xl leading-tight md:text-5xl">
               {page.intro.heading}
             </h2>
-            <p className="leading-8 text-[#676057]">{page.intro.body}</p>
+            <div className="grid gap-4">
+              {page.intro.body.map((paragraph) => (
+                <p key={paragraph} className="leading-8 text-[#676057]">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </section>
       ) : null}
@@ -61,6 +69,21 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
                 </div>
                 <div className="grid gap-4">
                   {section.body.map((paragraph) => (
+                    <p key={paragraph} className="leading-8 text-[#676057]">
+                      {paragraph}
+                    </p>
+                  ))}
+                  {section.items?.length ? (
+                    <ul className="grid gap-3 text-[#676057]">
+                      {section.items.map((item) => (
+                        <li key={item} className="flex gap-3 leading-7">
+                          <span className="mt-3 h-px w-5 shrink-0 bg-[#a6684a]" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  {section.afterItems?.map((paragraph) => (
                     <p key={paragraph} className="leading-8 text-[#676057]">
                       {paragraph}
                     </p>
@@ -115,7 +138,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
             ) : null}
           </div>
           <a href={whatsappHref} className={whatsappButtonClass}>
-            Book on WhatsApp
+            {ctaLabel}
           </a>
         </div>
       </section>
