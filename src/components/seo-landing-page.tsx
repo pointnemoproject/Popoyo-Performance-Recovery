@@ -5,6 +5,11 @@ import { whatsappButtonClass, whatsappHref } from "@/lib/site";
 
 export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
   const ctaLabel = page.ctaLabel ?? "Book on WhatsApp";
+  const finalCtaCopy = Array.isArray(page.finalCta?.copy)
+    ? page.finalCta.copy
+    : page.finalCta?.copy
+      ? [page.finalCta.copy]
+      : [];
 
   return (
     <main>
@@ -17,6 +22,15 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#676057]">
             {page.hero.copy}
           </p>
+          {page.hero.body?.length ? (
+            <div className="mt-5 grid max-w-2xl gap-4">
+              {page.hero.body.map((paragraph) => (
+                <p key={paragraph} className="leading-8 text-[#676057]">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ) : null}
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={whatsappHref} className={whatsappButtonClass}>
               {ctaLabel}
@@ -109,6 +123,25 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
         </section>
       ) : null}
 
+      {page.relatedLinks?.length ? (
+        <section className="border-y hairline bg-[#f7f1e8]">
+          <div className="section-shell py-14 md:py-16">
+            <p className="text-xs uppercase text-[#386575]">Related services</p>
+            <div className="mt-8 grid gap-0 border-t hairline md:grid-cols-2">
+              {page.relatedLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="border-b hairline py-5 text-lg text-[#24231f] transition hover:text-[#386575] md:pr-8"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {page.faqs?.length ? (
         <section className="section-shell py-14 md:py-16">
           <p className="text-xs uppercase text-[#386575]">FAQ</p>
@@ -132,8 +165,14 @@ export function SeoLandingPage({ page }: { page: SeoLandingPageContent }) {
             <p className="font-editorial text-5xl leading-none">
               {page.finalCta?.heading ?? "Move better in Popoyo."}
             </p>
-            {page.finalCta?.copy ? (
-              <p className="mt-4 max-w-2xl leading-8 text-[#676057]">{page.finalCta.copy}</p>
+            {finalCtaCopy.length ? (
+              <div className="mt-4 grid max-w-2xl gap-4">
+                {finalCtaCopy.map((paragraph) => (
+                  <p key={paragraph} className="leading-8 text-[#676057]">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             ) : null}
           </div>
           <a href={whatsappHref} className={whatsappButtonClass}>
