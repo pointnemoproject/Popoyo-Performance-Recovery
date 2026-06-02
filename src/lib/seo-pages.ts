@@ -270,6 +270,133 @@ export const seoLandingPages: SeoLandingPageContent[] = [
       ],
     },
   },
+  {
+    slug: "surf-recovery-repair-popoyo",
+    eyebrow: "Surf recovery Popoyo",
+    title: "Surf Recovery and Repair in Popoyo | Popoyo Recovery",
+    description:
+      "Recover between surf sessions with Surf Recovery & Repair in Popoyo, including mobility, bodywork, corrective exercise, and return-to-surf support.",
+    keywords: [
+      "surf recovery Popoyo",
+      "surf recovery Nicaragua",
+      "surf soreness",
+      "recovery for surfers",
+      "Popoyo recovery",
+    ],
+    ctaLabel: "Book Surf Recovery & Repair",
+    hero: {
+      heading: "Surf Recovery and Repair in Popoyo",
+      copy:
+        "Recovery, mobility, bodywork, and movement support for surfers who want to feel better between sessions and stay in the water longer.",
+      body: [
+        "Surfing in Popoyo can be demanding. Long paddles, heavy sessions, boat rides, travel, heat, and back-to-back surf days can leave your body sore, tight, and slower to recover.",
+        "Surf Recovery & Repair is built for surfers dealing with soreness, stiffness, minor pain, overuse, or that general feeling that something is starting to break down.",
+        "The goal is simple: help you recover better, move better, and get back in the water feeling more prepared.",
+      ],
+      image: "/images/surf-running.jpg",
+      imageAlt: "Surf recovery and repair in Popoyo",
+    },
+    sections: [
+      {
+        title: "Built for Surfers in Popoyo",
+        body: [
+          "Popoyo is the kind of place where people push their bodies harder than they realize. A quick surf turns into two hours. One good swell turns into five days in a row. Boat rides add more time in the sun, more paddling, more sitting, and more wear on the body.",
+          "That is usually when small issues start to show up.",
+          "Whether you are surfing around Popoyo, heading up toward Colorados, or chasing waves by boat, recovery matters if you want to make the most of your time here.",
+          "Surf Recovery & Repair is designed for those in-between moments: you are not dealing with an emergency, but your body is telling you something needs attention.",
+        ],
+      },
+      {
+        title: "Common Reasons People Book",
+        body: ["This session may be useful if you are dealing with:"],
+        items: [
+          "Shoulder tightness or paddling fatigue",
+          "Low back soreness after surfing",
+          "Hip stiffness or limited rotation",
+          "Neck and upper back tension",
+          "Rib, trunk, or rotational tightness",
+          "Heavy legs or general fatigue",
+          "Minor tweaks or overuse issues",
+          "Soreness from surfing too many sessions in a row",
+          "Feeling beat up after boat rides, too many sessions, or travel",
+          "Uncertainty about whether to keep surfing, rest, or modify activity",
+        ],
+        afterItems: ["The work is practical and focused on what you need right now."],
+      },
+      {
+        title: "What a Session May Include",
+        body: [
+          "Depending on what is going on, a Surf Recovery & Repair session may include:",
+        ],
+        items: [
+          "Movement and mobility checks",
+          "Sports massage or bodywork",
+          "Soft-tissue recovery",
+          "Corrective exercise",
+          "Strength or activation work",
+          "Mobility and flexibility work",
+          "Surf-specific movement preparation",
+          "Recovery planning between sessions",
+          "Gradual return-to-surf guidance",
+        ],
+        afterItems: [
+          "Some sessions are more hands-on. Some are more movement-focused. Some are a mix of both.",
+        ],
+      },
+      {
+        title: "More Than Massage, Less Complicated Than Rehab",
+        body: [
+          "Sometimes you need massage. Sometimes you need mobility. Sometimes you need to strengthen something that is not doing its job. Sometimes you just need help figuring out what to do before the next swell.",
+          "Surf Recovery & Repair sits in that middle ground.",
+          "It is not just a relaxing massage, and it is not a complicated medical process. It is structured recovery support for surfers who want to keep moving, keep surfing, and avoid letting small issues turn into bigger ones.",
+        ],
+      },
+      {
+        title: "Who This Is Best For",
+        body: ["Surf Recovery & Repair is a good fit for:"],
+        items: [
+          "Surf travelers trying to make the most of a trip",
+          "Expats and homeowners who surf regularly",
+          "Long-stay visitors managing accumulated soreness",
+          "People staying in rentals, boutique hotels, Airbnbs, or surf camps",
+          "Retreat guests or active travelers who want recovery support",
+          "Surfers coming back from a minor setback",
+          "Anyone who feels tight, sore, or physically limited after time in the water",
+        ],
+        afterItems: [
+          "It is especially useful when you want hands-on support plus a practical plan for what to do next.",
+        ],
+      },
+      {
+        title: "When to Seek Medical Care",
+        body: [
+          "Some situations need a higher level of medical evaluation. We recommend seeking care from a qualified medical provider if you are dealing with acute trauma, severe or worsening pain, a suspected fracture or dislocation, major swelling or bruising, inability to bear weight, numbness, tingling, weakness, or other neurological symptoms.",
+          "If something feels serious, get it checked out first.",
+        ],
+      },
+      {
+        title: "How Popoyo Recovery Fits In",
+        body: [
+          "Popoyo Recovery combines sports massage, bodywork, movement, mobility, strengthening, and injury support for active people in Popoyo.",
+          "Surf Recovery & Repair is the most surf-specific version of that work. It is designed to help you recover between sessions, manage soreness, address minor issues, and feel more ready for your next time in the water.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      { label: "Surf Recovery & Repair", href: "/surf-recovery-repair" },
+      { label: "Sports Massage & Bodywork", href: "/sports-massage-bodywork" },
+      { label: "Movement & Mobility", href: "/movement-mobility" },
+      { label: "Injury Support", href: "/injury-support" },
+      { label: "Performance Training", href: "/performance-training" },
+    ],
+    finalCta: {
+      heading: "Book Surf Recovery & Repair",
+      copy: [
+        "Do not wait until your body is fully wrecked.",
+        "Book a Surf Recovery & Repair session in Popoyo and give yourself a better chance of feeling good for the rest of your trip, swell, or stay.",
+      ],
+    },
+  },
 ];
 
 export const seoLandingPagesBySlug = new Map(
