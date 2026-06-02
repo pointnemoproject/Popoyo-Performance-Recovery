@@ -1,5 +1,161 @@
 import Link from "next/link";
 import { ImagePanel } from "@/components/image-panel";
-import { services, siteConfig, whatsappButtonClass, whatsappHref } from "@/lib/site";
+import {
+  recoveryServiceLinks,
+  services,
+  siteConfig,
+  whatsappButtonClass,
+  whatsappHref,
+} from "@/lib/site";
 
-export default function Home(){return <main><section className="section-shell grid min-h-[calc(100vh-81px)] gap-10 py-8 md:grid-cols-[.95fr_1.05fr] md:items-center"><div><p className="text-xs uppercase text-[#386575]">Popoyo, Nicaragua</p><h1 className="font-editorial mt-6 text-6xl leading-none md:text-8xl">Recover faster.<br/>Move stronger.<br/>Surf better.</h1><p className="mt-7 max-w-xl text-lg leading-8 text-[#676057]">Massage, mobility training, and physical therapy-informed recovery for surfers, athletes, and active travelers in Popoyo.</p><div className="mt-9 flex gap-3"><a href={whatsappHref} className={whatsappButtonClass}>Book on WhatsApp</a><Link href="#services" className="border border-[#817869] px-6 py-3 text-sm">Explore Services</Link></div></div><ImagePanel src="/images/hero-surf-recovery.jpg" alt="Surf recovery in Popoyo" priority className="aspect-[4/5] min-h-[520px]"/></section><section className="border-y hairline bg-[#f7f1e8]"><div className="section-shell py-16"><p className="font-editorial max-w-3xl text-4xl leading-tight md:text-6xl">A personalized recovery and movement practice built around your body, your goals, and the rhythm of life in Popoyo.</p></div></section><section id="services" className="section-shell py-16"><p className="text-xs uppercase text-[#a6684a]">Services</p><h2 className="font-editorial mt-4 text-5xl">Recovery with range.</h2><div className="mt-10 grid gap-8">{services.map((service)=><article key={service.href} className="grid gap-6 border-t hairline pt-8 md:grid-cols-2 md:items-center"><ImagePanel src={service.image} alt={service.title} className="aspect-[5/3]"/><div><h3 className="font-editorial text-4xl">{service.title}</h3><p className="mt-4 max-w-xl leading-8 text-[#676057]">{service.copy}</p><Link href={service.href} className="mt-6 inline-flex border border-[#817869] px-5 py-3 text-sm">View Service</Link></div></article>)}</div></section><section id="approach" className="border-y hairline bg-[#24231f] text-[#f7f1e8]"><div className="section-shell grid gap-8 py-16 md:grid-cols-2 md:items-center"><div><p className="text-xs uppercase text-[#ded0bd]">Approach</p><h2 className="font-editorial mt-4 text-5xl leading-tight">A whole-body approach to moving well.</h2><p className="mt-5 leading-8 text-[#ded0bd]">Recovery is not just about relieving tension. It is about understanding how the body moves, where it holds stress, and what it needs to feel strong, balanced, and capable again.</p><p className="mt-4 leading-8 text-[#ded0bd]">Sessions blend bodywork, movement awareness, mobility, strength, breath, and practical recovery work to help you move with more ease, control, and confidence.</p><p className="mt-4 leading-8 text-[#ded0bd]">Many clients come to us looking for physical therapy, sports recovery, or injury prevention support in Popoyo. Our approach combines hands-on recovery work, mobility training, strengthening, and movement coaching to help active people move better and stay active.</p></div><ImagePanel src="/images/surfboards-recovery.jpg" alt="Surfboards and recovery setting" className="aspect-[4/5]"/></div></section><section className="section-shell grid gap-8 py-16 md:grid-cols-2 md:items-center"><div><p className="font-editorial text-6xl leading-none">Move better in Popoyo.</p><a href={whatsappHref} className={`mt-8 ${whatsappButtonClass}`}>Book on WhatsApp</a><p className="mt-4 text-sm text-[#676057]">WhatsApp {siteConfig.whatsappDisplay}</p></div><ImagePanel src="/images/surfing-sunset.jpg" alt="Surfing at sunset in Popoyo" className="aspect-[4/5]"/></section></main>}
+export default function Home() {
+  return (
+    <main>
+      <section className="section-shell grid min-h-[calc(100vh-81px)] gap-10 py-8 md:grid-cols-[.95fr_1.05fr] md:items-center">
+        <div>
+          <p className="text-xs uppercase text-[#386575]">Popoyo, Nicaragua</p>
+          <h1 className="font-editorial mt-6 text-6xl leading-none md:text-8xl">
+            Recover faster.
+            <br />
+            Move stronger.
+            <br />
+            Surf better.
+          </h1>
+          <p className="mt-7 max-w-xl text-lg leading-8 text-[#676057]">
+            Massage, mobility training, and physical therapy-informed recovery for
+            surfers, athletes, and active travelers in Popoyo.
+          </p>
+          <div className="mt-9 flex gap-3">
+            <a href={whatsappHref} className={whatsappButtonClass}>
+              Book on WhatsApp
+            </a>
+            <Link href="#services" className="border border-[#817869] px-6 py-3 text-sm">
+              Explore Services
+            </Link>
+          </div>
+        </div>
+        <ImagePanel
+          src="/images/hero-surf-recovery.jpg"
+          alt="Surf recovery in Popoyo"
+          priority
+          className="aspect-[4/5] min-h-[520px]"
+        />
+      </section>
+
+      <section className="border-y hairline bg-[#f7f1e8]">
+        <div className="section-shell py-16">
+          <p className="font-editorial max-w-3xl text-4xl leading-tight md:text-6xl">
+            A personalized recovery and movement practice built around your body,
+            your goals, and the rhythm of life in Popoyo.
+          </p>
+        </div>
+      </section>
+
+      <section id="services" className="section-shell py-16">
+        <p className="text-xs uppercase text-[#a6684a]">Services</p>
+        <h2 className="font-editorial mt-4 text-5xl">Recovery with range.</h2>
+        <div className="mt-10 grid gap-8">
+          {services.map((service) => (
+            <article
+              key={service.href}
+              className="grid gap-6 border-t hairline pt-8 md:grid-cols-2 md:items-center"
+            >
+              <ImagePanel src={service.image} alt={service.title} className="aspect-[5/3]" />
+              <div>
+                <h3 className="font-editorial text-4xl">{service.title}</h3>
+                <p className="mt-4 max-w-xl leading-8 text-[#676057]">{service.copy}</p>
+                <Link
+                  href={service.href}
+                  className="mt-6 inline-flex border border-[#817869] px-5 py-3 text-sm"
+                >
+                  View Service
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="approach" className="border-y hairline bg-[#24231f] text-[#f7f1e8]">
+        <div className="section-shell grid gap-8 py-16 md:grid-cols-2 md:items-center">
+          <div>
+            <p className="text-xs uppercase text-[#ded0bd]">Approach</p>
+            <h2 className="font-editorial mt-4 text-5xl leading-tight">
+              A whole-body approach to moving well.
+            </h2>
+            <p className="mt-5 leading-8 text-[#ded0bd]">
+              Recovery is not just about relieving tension. It is about understanding how
+              the body moves, where it holds stress, and what it needs to feel strong,
+              balanced, and capable again.
+            </p>
+            <p className="mt-4 leading-8 text-[#ded0bd]">
+              Sessions blend bodywork, movement awareness, mobility, strength, breath,
+              and practical recovery work to help you move with more ease, control, and
+              confidence.
+            </p>
+            <p className="mt-4 leading-8 text-[#ded0bd]">
+              Many clients come to us looking for physical therapy, sports recovery, or
+              injury prevention support in Popoyo. Our approach combines hands-on
+              recovery work, mobility training, strengthening, and movement coaching to
+              help active people move better and stay active.
+            </p>
+          </div>
+          <ImagePanel
+            src="/images/surfboards-recovery.jpg"
+            alt="Surfboards and recovery setting"
+            className="aspect-[4/5]"
+          />
+        </div>
+      </section>
+
+      <section className="section-shell py-16">
+        <div className="grid gap-8 border-b border-t hairline py-12 md:grid-cols-[.9fr_1.1fr] md:items-start">
+          <div>
+            <p className="text-xs uppercase text-[#386575]">Recovery services</p>
+            <h2 className="font-editorial mt-4 text-5xl leading-tight">
+              Explore Recovery Services in Popoyo
+            </h2>
+            <p className="mt-5 max-w-xl leading-8 text-[#676057]">
+              Find the right support for soreness, mobility, injury recovery, bodywork,
+              and surf recovery during your time in Popoyo.
+            </p>
+          </div>
+          <div className="grid gap-3 lg:grid-cols-3">
+            {recoveryServiceLinks.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group flex min-h-40 flex-col justify-between border hairline bg-[#fbf8f1] p-5 transition hover:border-[#817869] hover:bg-[#f7f1e8]"
+              >
+                <span className="text-xs uppercase text-[#a6684a]">Service pathway</span>
+                <span className="mt-8 font-editorial text-3xl leading-tight">
+                  {service.title}
+                </span>
+                <span className="mt-6 text-sm text-[#676057] transition group-hover:text-[#24231f]">
+                  View service
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell grid gap-8 py-16 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="font-editorial text-6xl leading-none">Move better in Popoyo.</p>
+          <a href={whatsappHref} className={`mt-8 ${whatsappButtonClass}`}>
+            Book on WhatsApp
+          </a>
+          <p className="mt-4 text-sm text-[#676057]">
+            WhatsApp {siteConfig.whatsappDisplay}
+          </p>
+        </div>
+        <ImagePanel
+          src="/images/surfing-sunset.jpg"
+          alt="Surfing at sunset in Popoyo"
+          className="aspect-[4/5]"
+        />
+      </section>
+    </main>
+  );
+}
