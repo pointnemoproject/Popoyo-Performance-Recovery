@@ -24,6 +24,7 @@ export type SeoLandingPageContent = {
   hero: {
     heading: string;
     copy: string;
+    body?: string[];
     image: string;
     imageAlt: string;
   };
@@ -40,7 +41,7 @@ export type SeoLandingPageContent = {
   }[];
   finalCta?: {
     heading: string;
-    copy?: string;
+    copy?: string | string[];
   };
 };
 
@@ -161,6 +162,112 @@ export const seoLandingPages: SeoLandingPageContent[] = [
       heading: "Book a Session",
       copy:
         "Do not let a small issue derail your trip, training, or time in Popoyo. Book a recovery, mobility, or injury support session, and we will help you figure out the next practical step.",
+    },
+  },
+  {
+    slug: "sports-massage-popoyo",
+    eyebrow: "Sports massage Popoyo",
+    title: "Sports Massage in Popoyo | Popoyo Recovery",
+    description:
+      "Book sports massage and bodywork in Popoyo for surf soreness, tight muscles, travel fatigue, and recovery between sessions.",
+    keywords: [
+      "sports massage Popoyo",
+      "massage Popoyo",
+      "surf massage Nicaragua",
+      "recovery massage Popoyo",
+      "bodywork Popoyo",
+    ],
+    ctaLabel: "Book Sports Massage & Bodywork",
+    hero: {
+      heading: "Sports Massage in Popoyo for Surfers and Active Travelers",
+      copy: "Sports massage and bodywork for surfers, expats, retreat guests, and active travelers in Popoyo.",
+      body: [
+        "Long surf days, travel, training, and tropical heat can leave your body feeling tight, sore, and run down. If you are looking for sports massage in Popoyo, Popoyo Recovery offers hands-on bodywork and recovery support designed for active people who want to feel better, recover more effectively, and keep moving.",
+        "Whether you are dealing with post-surf soreness, tight shoulders, low back tension, heavy legs, or general travel fatigue, a focused recovery session can help you reset before your next session or activity.",
+      ],
+      image: "/images/sports-massage.jpg",
+      imageAlt: "Sports massage and bodywork in Popoyo",
+    },
+    sections: [
+      {
+        title: "Massage and Bodywork for Active Life in Popoyo",
+        body: [
+          "Popoyo attracts people who come here to surf, train, explore, relax, and spend time outdoors. That usually means long days, inconsistent routines, and more physical stress than people realize.",
+          "Sports massage and bodywork can be a useful way to manage soreness, reduce tension, improve mobility, and support recovery between sessions.",
+          "For surfers, that may mean recovering between sessions and getting back in the water feeling better. For everyone else, it may mean staying loose, managing soreness, and feeling ready for whatever brought you to Popoyo in the first place.",
+        ],
+      },
+      {
+        title: "What Sports Massage Can Help With",
+        body: ["Sessions may be useful for:"],
+        items: [
+          "Shoulder and neck tension from paddling or travel",
+          "Low back tightness after surfing, training, or long drives",
+          "Hip, glute, and leg soreness from activity",
+          "Tight calves, feet, or ankles",
+          "General muscle soreness after heavy activity days",
+          "Travel fatigue and stiffness",
+          "Recovery between surf sessions, workouts, or retreat activities",
+          "Feeling run down, tight, or physically stuck",
+        ],
+        afterItems: [
+          "The goal is simple: help your body calm down, move better, and recover more effectively.",
+        ],
+      },
+      {
+        title: "What a Session May Include",
+        body: ["Depending on what you need, a session may include:"],
+        items: [
+          "Sports massage",
+          "Deep tissue bodywork",
+          "Soft-tissue release",
+          "Assisted mobility work",
+          "Stretching",
+          "Recovery-focused movement",
+          "Targeted work on tight or overloaded areas",
+          "Simple guidance for what to do after the session",
+        ],
+        afterItems: [
+          "The session can be more relaxing, more targeted, or more recovery-focused depending on what your body needs that day.",
+        ],
+      },
+      {
+        title: "Built for Surfers, Expats, and Travelers",
+        body: [
+          "A lot of massage is either too light to be useful or too aggressive without a clear purpose.",
+          "Our approach is different. We focus on practical bodywork for active people. That means paying attention to how your body feels, what you have been doing, and what you want to get back to.",
+          "For surfers, that may mean shoulders, neck, upper back, low back, hips, and legs. For expats and travelers, it may mean managing accumulated tightness from travel, training, work, or daily life in Popoyo.",
+        ],
+      },
+      {
+        title: "When Massage May Not Be the Right Fit",
+        body: [
+          "Sports massage and bodywork can be helpful for soreness, tightness, and recovery, but some situations need a higher level of care.",
+          "We recommend seeking medical evaluation if you are dealing with acute trauma, severe or worsening pain, a suspected fracture or dislocation, major swelling or bruising, inability to bear weight, numbness, tingling, weakness, or other neurological symptoms.",
+          "If something feels serious, get it checked out first.",
+        ],
+      },
+      {
+        title: "How Popoyo Recovery Fits In",
+        body: [
+          "Popoyo Recovery combines bodywork, mobility, movement, and recovery support for active people.",
+          "Sports Massage & Bodywork is a good fit when you want hands-on support for soreness, tightness, travel fatigue, or recovery between activity days.",
+          "If your issue needs more structure, we can also help connect the dots with mobility work, strengthening, surf recovery, or injury support.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      { label: "Sports Massage & Bodywork", href: "/sports-massage-bodywork" },
+      { label: "Surf Recovery & Repair", href: "/surf-recovery-repair" },
+      { label: "Movement & Mobility", href: "/movement-mobility" },
+      { label: "Injury Support", href: "/injury-support" },
+    ],
+    finalCta: {
+      heading: "Book Sports Massage & Bodywork",
+      copy: [
+        "Do not wait until your body feels wrecked.",
+        "Book a sports massage or bodywork session in Popoyo and give yourself a better chance of feeling good for the rest of your trip, training block, or stay.",
+      ],
     },
   },
 ];
