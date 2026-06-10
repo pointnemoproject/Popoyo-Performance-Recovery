@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ImagePanel } from "@/components/image-panel";
 import {
-  recoveryServiceLinks,
   services,
   siteConfig,
   whatsappButtonClass,
@@ -105,38 +104,6 @@ export default function Home() {
             alt="Surfboards and recovery setting"
             className="aspect-[4/5]"
           />
-        </div>
-      </section>
-
-      <section className="section-shell py-16">
-        <div className="grid gap-8 border-b border-t hairline py-12 md:grid-cols-[.9fr_1.1fr] md:items-start">
-          <div>
-            <p className="text-xs uppercase text-[#386575]">Recovery services</p>
-            <h2 className="font-editorial mt-4 text-5xl leading-tight">
-              Explore Recovery Services in Popoyo
-            </h2>
-            <p className="mt-5 max-w-xl leading-8 text-[#676057]">
-              Find the right support for soreness, mobility, injury recovery, bodywork,
-              and surf recovery during your time in Popoyo.
-            </p>
-          </div>
-          <div className="grid gap-3 lg:grid-cols-3">
-            {recoveryServiceLinks.map((service) => (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="group flex min-h-40 flex-col justify-between border hairline bg-[#fbf8f1] p-5 transition hover:border-[#817869] hover:bg-[#f7f1e8]"
-              >
-                <span className="text-xs uppercase text-[#a6684a]">Service pathway</span>
-                <span className="mt-8 font-editorial text-3xl leading-tight">
-                  {service.title}
-                </span>
-                <span className="mt-6 text-sm text-[#676057] transition group-hover:text-[#24231f]">
-                  View service
-                </span>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
